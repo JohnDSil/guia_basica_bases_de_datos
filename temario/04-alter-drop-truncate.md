@@ -2,7 +2,7 @@
 
 ## Modificación de Estructura (`ALTER TABLE`)
 
-Permite añadir, modificar o eliminar columnas y restricciones sin destruir la tabla[cite: 196]:
+Permite añadir, modificar o eliminar columnas y restricciones sin destruir la tabla:
 
 ### 1. Añadir columnas (`ADD`):
 ```sql
@@ -39,20 +39,20 @@ ALTER TABLE empleados DROP CONSTRAINT ck_sal_min;
 ## Borrado de Tablas
 
 ### `DROP TABLE`
-Elimina la estructura completa, sus datos y los índices asociados[cite: 159, 202].
+Elimina la estructura completa, sus datos y los índices asociados.
 ```sql
 -- CASCADE CONSTRAINTS elimina las claves foráneas en otras tablas que apuntaban a esta
 DROP TABLE departamentos CASCADE CONSTRAINTS;
 ```
 
 ### `TRUNCATE TABLE`
-Instrucción DDL que vacía rápidamente todos los registros de una tabla y libera el espacio de almacenamiento, conservando la definición intacta[cite: 203]. No puede revertirse mediante `ROLLBACK`[cite: 203].
+Instrucción DDL que vacía rápidamente todos los registros de una tabla y libera el espacio de almacenamiento, conservando la definición intacta[cite: 203]. No puede revertirse mediante `ROLLBACK`.
 ```sql
 TRUNCATE TABLE empleados;
 ```
 
 ## Uso de Sinónimos (`SYNONYM`)
-Permiten asignar un alias alternativo a un objeto para no usar la sintaxis `esquema.objeto`[cite: 204]:
+Permiten asignar un alias alternativo a un objeto para no usar la sintaxis `esquema.objeto`:
 ```sql
 -- Crear sinónimo público (requiere privilegios administrativos)
 CREATE PUBLIC SYNONYM emp FOR scott.emp;
