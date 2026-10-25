@@ -1,13 +1,13 @@
 # 07. Combinación de Múltiples Tablas (JOINS)
 
-Permite relacionar registros de distintas entidades a través de sus claves primarias y foráneas[cite: 45, 113, 116, 230].
+Permite relacionar registros de distintas entidades a través de sus claves primarias y foráneas.
 
 ## 1. Producto Cartesiano
-Ocurre cuando se omiten las condiciones de enlace en el `WHERE`, multiplicando cada fila de una tabla por todas las filas de la otra[cite: 46, 47, 114, 230].
-*(Si la tabla A tiene 14 filas y la B tiene 4, el resultado arroja $14 \times 4 = 56$ filas erróneas)*[cite: 47].
+Ocurre cuando se omiten las condiciones de enlace en el `WHERE`, multiplicando cada fila de una tabla por todas las filas de la otra.
+*(Si la tabla A tiene 14 filas y la B tiene 4, el resultado arroja $14 \times 4 = 56$ filas erróneas)*.
 
 ## 2. Equijoin (Combinación Interna / INNER JOIN)
-Muestra únicamente las filas que encuentran correspondencia exacta en ambas tablas[cite: 49, 116]:
+Muestra únicamente las filas que encuentran correspondencia exacta en ambas tablas:
 
 ### Sintaxis Tradicional (con condición en WHERE):
 ```sql
@@ -32,10 +32,10 @@ WHERE e.sal BETWEEN s.losal AND s.hisal;
 ```
 
 ## 4. Combinaciones Externas (Outer Joins)
-Permiten visualizar todas las filas de una tabla, incluso si no tienen filas relacionadas en la otra tabla[cite: 58, 116, 118, 234]:
+Permiten visualizar todas las filas de una tabla, incluso si no tienen filas relacionadas en la otra tabla:
 
 ### Sintaxis Clásica de Oracle (Operador `(+)`):
-El operador `(+)` se coloca en el lado que carece de información (el lado que completará con nulos)[cite: 58, 59]:
+El operador `(+)` se coloca en el lado que carece de información (el lado que completará con nulos):
 ```sql
 -- Muestra todos los departamentos, tengan o no empleados
 SELECT d.deptno, d.dname, e.ename
@@ -51,7 +51,7 @@ LEFT JOIN emp e ON d.deptno = e.deptno;
 ```
 
 ## 5. Self-Join (Combinación con la Misma Tabla)
-Permite relacionar una tabla consigo misma usando alias diferentes (ejemplo: vincular al empleado con su jefe)[cite: 60, 61]:
+Permite relacionar una tabla consigo misma usando alias diferentes (ejemplo: vincular al empleado con su jefe):
 ```sql
 SELECT trabajador.ename || ' trabaja para ' || jefe.ename AS jerarquia
 FROM emp trabajador, emp jefe
