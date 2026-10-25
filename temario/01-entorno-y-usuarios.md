@@ -1,10 +1,10 @@
 # 01. Entorno, Creación de Usuarios y Esquemas en Oracle
 
-En Oracle existe una arquitectura basada en contenedores (CDB) y bases de datos conectables (PDB)[cite: 158]. Por regla general, el trabajo de desarrollo y prácticas se ejecuta dentro de la PDB asignada (habitualmente `xepdb1`)[cite: 158].
+En Oracle existe una arquitectura basada en contenedores (CDB) y bases de datos conectables (PDB). Por regla general, el trabajo de desarrollo y prácticas se ejecuta dentro de la PDB asignada (habitualmente `xepdb1`).
 
 ## Procedimiento Inicial de Configuración
 
-Para no trabajar directamente sobre el usuario administrativo `SYSTEM`, se crea un usuario de trabajo que actúa como propietario de su propio **esquema** (conjunto de tablas, vistas e índices)[cite: 158].
+Para no trabajar directamente sobre el usuario administrativo `SYSTEM`, se crea un usuario de trabajo que actúa como propietario de su propio **esquema** (conjunto de tablas, vistas e índices).
 
 ### 1. Conexión al servicio `xepdb1` como administrador:
 ```sql
