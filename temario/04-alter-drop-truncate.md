@@ -46,7 +46,7 @@ DROP TABLE departamentos CASCADE CONSTRAINTS;
 ```
 
 ### `TRUNCATE TABLE`
-Instrucción DDL que vacía rápidamente todos los registros de una tabla y libera el espacio de almacenamiento, conservando la definición intacta[cite: 203]. No puede revertirse mediante `ROLLBACK`.
+Instrucción DDL que vacía rápidamente todos los registros de una tabla y libera el espacio de almacenamiento, conservando la definición intacta. No puede revertirse mediante `ROLLBACK`.
 ```sql
 TRUNCATE TABLE empleados;
 ```
